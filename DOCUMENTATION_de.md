@@ -23,7 +23,7 @@
 ## Author information
 
 * (c) by max675, 2015
-* https://github.com/max675/raspicam-streamer
+* Project Home: https://github.com/max675/raspicam-streamer
 
 ## Eckdaten des Projektes
 
