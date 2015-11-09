@@ -4,7 +4,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Author Information:](#author-information)
+- [Author information](#author-information)
 - [Überblick](#%C3%BCberblick)
 - [Beschreibung des Inhaltes des Repository](#beschreibung-des-inhaltes-des-repository)
 - [Schritte Installation](#schritte-installation)
@@ -20,11 +20,10 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Author Information:
+## Author information
 
 * (c) by max675, 2015
 * https://github.com/max675/raspicam-streamer
-
 
 ## Überblick
 
