@@ -1,0 +1,42 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          copyconf
+# Required-Start:    $local_fs $time
+# Required-Stop:     $local_fs
+# Default-Start:     S
+# Default-Stop:      
+# Short-Description: Copy Config files from /boot 
+# Description:       
+#                    
+### END INIT INFO
+
+# Source/Docs: github.com/max675/raspicam-streamer
+# (c) 2015 by max675
+
+# Do NOT "set -e"
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH=/sbin:/bin
+
+if [ -f "/boot/interfaces" ]
+then
+	echo "copyconf: interfaces found."
+	cp /boot/interfaces /etc/network/interfaces
+	chmod 0644 /etc/network/interfaces 
+	chown root:root /etc/network/interfaces
+else
+	echo "copyconf: interfaces  not found."
+fi
+
+
+if [ -f "/boot/picam2.sh" ]
+then
+	echo "copyconf: picam2 found."
+	cp /boot/picam2.sh /etc/service/vlcd/picam2.sh
+	chmod 0745 /etc/service/vlcd/picam2.sh
+	chown root:root /etc/service/vlcd/picam2.sh
+else
+	echo "copyconf: picam2  not found."
+fi
+
+

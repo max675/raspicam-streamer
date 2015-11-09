@@ -1,0 +1,7 @@
+#!/bin/sh
+# vlcd service start file
+echo starting vlc as daemon
+exec 2>&1
+#exec setuidgid vlcd vlc -I http --http-port 8081
+#exec setuidgid vlcd /etc/service/vlcd/picam2.sh
+exec sudo -u vlcd /etc/service/vlcd/picam2.sh

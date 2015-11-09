@@ -1,0 +1,3 @@
+#!/bin/sh
+# vlcd logging
+exec setuidgid vlcd multilog t /var/log/vlcd

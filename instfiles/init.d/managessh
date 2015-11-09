@@ -1,0 +1,27 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          managessh
+# Required-Start:    $remote_fs 
+# Required-Stop:     $remote_fs 
+# Default-Start:     S
+# Default-Stop:      
+# Short-Description: Enables or Disables ssh
+# Description:       This file should be used to construct scripts to be
+#                    placed in /etc/init.d.
+### END INIT INFO
+
+# Source/Docs: github.com/max675/raspicam-streamer
+# (c) 2015 by max675
+
+# Do NOT "set -e"
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+
+	if [ -f "/boot/enable_ssh" ]
+	then
+		/usr/sbin/update-rc.d ssh enable 
+	else
+		/usr/sbin/update-rc.d ssh disable 
+	fi
