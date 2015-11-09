@@ -1,9 +1,9 @@
 # Raspberry Pi Video Streaming
 
-Author:
+Author Information:
 
-by max675
-https://github.com/max675/raspicam-streamer
+* (c) by max675, 2015
+* https://github.com/max675/raspicam-streamer
 
 
 # Überblick
