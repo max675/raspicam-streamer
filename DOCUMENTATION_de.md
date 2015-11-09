@@ -25,7 +25,7 @@
 * (c) by max675, 2015
 * https://github.com/max675/raspicam-streamer
 
-## Überblick
+## Eckdaten des Projektes
 
 **Verwendete Teile:** 
 
