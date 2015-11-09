@@ -4,7 +4,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Raspberry Pi Video Streaming](#raspberry-pi-video-streaming)
+- [Author Information:](#author-information)
 - [Überblick](#%C3%BCberblick)
 - [Beschreibung des Inhaltes des Repository](#beschreibung-des-inhaltes-des-repository)
 - [Schritte Installation](#schritte-installation)
@@ -20,13 +20,13 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-Author Information:
+## Author Information:
 
 * (c) by max675, 2015
 * https://github.com/max675/raspicam-streamer
 
 
-# Überblick
+## Überblick
 
 **Verwendete Teile:** 
 
@@ -55,7 +55,7 @@ Das Projekt besteht aus einer Reihe von Bash-Skripten, welche auf einem frisch i
 * Ein daemon-tools Service für den Autostart von VLC
 * bootconf-Skripte für die automatische Kopierung von Konfigurationsdateien von der Boot-Partition in die root-Partition (genau Beschreibung siehe eigener Abschnitt)
 
-# Beschreibung des Inhaltes des Repository
+## Beschreibung des Inhaltes des Repository
 
 | Datei / Ordner        | Beschreibung                                                                                                 |
 | --------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -65,7 +65,7 @@ Das Projekt besteht aus einer Reihe von Bash-Skripten, welche auf einem frisch i
 | instfiles             | Ordner mit Skripten welche im System installiert werden                                                      |
 | raspi-config-func.sh  | Hilfsfunktionen für RPI                                                                                      |
 
-# Schritte Installation
+## Schritte Installation
 
 Hinweise:
 
@@ -104,11 +104,11 @@ Weitere mögliche Schritte
 * Man kann anschließend (vorher herunterfahren!) mit dem Speicherkartenleser an der Linux-Workstation ein Image von der Speicherkarte ziehen per `dd` und dieses auf weitere Speicherkarten schreiben. So lässt sich die Installation mit geringem Aufwand duplizieren.
 * Wenn das Bootconf-Skript installiert wurde, kann man für jede Speicherkarte eine eigene statische IP vergeben, welche beim Systemstart angewendet wird. (Dazu siehe Bootconf-Abschnitt)
 
-# Detail-Beschreibung der Installationsskripte
+## Detail-Beschreibung der Installationsskripte
 
 Was machen die einzelnen Skripte
 
-## Skript 00_pre-install.sh 
+### Skript 00_pre-install.sh 
 
 * Tastaturlayout anpassen
 * locales anpassen
@@ -118,7 +118,7 @@ Was machen die einzelnen Skripte
 * `vim` installieren
 * RPI Kamera aktivieren (Äquivalent zum Menüpunkt im raspi-config)
 
-## Skript 01_install.sh
+### Skript 01_install.sh
 
 Verantwortlich für die Installation des Streaming-Dienstes.
 
@@ -131,7 +131,7 @@ Verantwortlich für die Installation des Streaming-Dienstes.
 * UDEV Permissions für Kamera anpassen (damit normaler User Zugriff hat)
 * Service starten
 
-## Skript 02_inst_bootconf.sh
+### Skript 02_inst_bootconf.sh
 
 Verantwortlich für die optionale Installation des Bootconf-Skriptes/Systems.
 
@@ -141,11 +141,11 @@ Verantwortlich für die optionale Installation des Bootconf-Skriptes/Systems.
 * Installieren des bootconf-Skriptes `managessh` in `/etc/init.d/`
 * Aktivieren beider Skripte für die Ausführung beim Systemstart über `update-rc.d`
 
-# Bootconf
+## Bootconf
 
 Hier wird das eigens entwickelte, aber optionale Bootconf-System beschrieben. Man muss sich selber überlegen ob man das braucht. Es wird installiert über das Skript `02_inst_bootconf.sh`. Ggf. die Installation weglassen.
 
-## Sinn von Bootconf
+### Sinn von Bootconf
 
 * Ermöglicht einfaches Ändern der Konfiguration auf der Speicherkarte, ohne dass man einen Ext3-Treiber auf dem Arbeitsrecher haben muss
 * Man kann einfach die Speicherkarte in den Kartenleser einstecken, und die Konfig-Files bequem auf einer Fat32 Partion ändern, welche jeder PC öffnen kann, egal ob Windows oder Linux
@@ -154,7 +154,7 @@ Hier wird das eigens entwickelte, aber optionale Bootconf-System beschrieben. Ma
 
 
 
-## Welche Konfig.Einstellungen kann man ändern?
+### Welche Konfig.Einstellungen kann man ändern?
 
 Diese Dateien finden sich auf der Fat32 Boot Partition, wenn man die Speicherkarte mit dem Speicherkartenleser an einen PC anschließt. Die Dateien können mit einem Texteditor editiert werden.
 
@@ -164,14 +164,14 @@ Diese Dateien finden sich auf der Fat32 Boot Partition, wenn man die Speicherkar
 | picam2.sh   | /etc/service/vlcd/picam2.sh | VLC Parameter, Port, RTSP, Auflösung, Video-Kamera-Mode                              |
 | enable_ssh  | -                           | Ist die Datei existent, wird sshd aktiviert. Fehlt die Datei, wird sshd deaktiviert. |
 
-## Hinweise zu Bootconf
+### Hinweise zu Bootconf
 
 Führt man Änderungen per ssh durch, anstatt wie vorgesehen über den Speicherkartenleser, ist zu beachten:
 
 * Ist Bootconf installiert, dann werden per ssh durchgeführte Änderungen an den o.g. Ziel-Dateien logischerweise beim nächsten Systemstart plattgeschrieben!
 * Möchte man dauerhafte Änderungen per ssh vornehmen, daran denken, die Dateien in `/boot` zu ändern und dann rebooten.
 
-# Hinweise Streaming-Client
+## Hinweise Streaming-Client
 
 Kamera ist via RTSP Port 9000 erreichbar.
 
