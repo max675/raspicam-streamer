@@ -6,6 +6,7 @@
 
 - [Author information](#author-information)
 - [Eckdaten des Projektes](#eckdaten-des-projektes)
+- [Mitarbeit am Projekt](#mitarbeit-am-projekt)
 - [Beschreibung des Inhaltes des Repository](#beschreibung-des-inhaltes-des-repository)
 - [Schritte Installation](#schritte-installation)
 - [Detail-Beschreibung der Installationsskripte](#detail-beschreibung-der-installationsskripte)
@@ -53,6 +54,10 @@ Das Projekt besteht aus einer Reihe von Bash-Skripten, welche auf einem frisch i
 * Ein Skript `picam2.sh`, welches VLC mit den richtigen Parametern für das Streaming startet
 * Ein daemon-tools Service für den Autostart von VLC
 * bootconf-Skripte für die automatische Kopierung von Konfigurationsdateien von der Boot-Partition in die root-Partition (genau Beschreibung siehe eigener Abschnitt)
+
+## Mitarbeit am Projekt
+
+* Korrekturen / Verbesserungen können gerne per PullRequest eingereicht werden.
 
 ## Beschreibung des Inhaltes des Repository
 
