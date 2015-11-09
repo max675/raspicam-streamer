@@ -33,6 +33,7 @@
 * Raspberry Pi Model B
 * Raspberry Pi Camera
 * Raspbian Image (https://www.raspbian.org/)
+    * Getestet mit: `2014-09-09-wheezy-raspbian.img`
 * Speicherkarte
 
 **Ziel des Projektes:**
@@ -102,6 +103,7 @@ Hinweise:
 * Das Licht an der Kamera sollte nun leuchten.
 * Die Kamera sollte nun erreichbar sein.
 * Abschnitt "Hinweise Streaming-Client" beachten.
+* VLC Logfiles liegt hier: `/var/log/vlcd/current`
 
 Weitere mögliche Schritte
 
