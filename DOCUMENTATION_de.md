@@ -5,7 +5,7 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Author information](#author-information)
-- [Überblick](#%C3%BCberblick)
+- [Eckdaten des Projektes](#eckdaten-des-projektes)
 - [Beschreibung des Inhaltes des Repository](#beschreibung-des-inhaltes-des-repository)
 - [Schritte Installation](#schritte-installation)
 - [Detail-Beschreibung der Installationsskripte](#detail-beschreibung-der-installationsskripte)
